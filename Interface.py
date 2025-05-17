@@ -1,4 +1,4 @@
-from primeiro import converter_binario, converter_decimal, soma_binario
+from primeiro import converter_binario, converter_decimal, soma_binario, subtrair_binario
 
 def menu():
    print("="*40)
@@ -18,20 +18,19 @@ def main():
         print("")
         match opcao:
 
-            case 1:
-                converter_binario()
-            case 2:
-                converter_decimal()
-        
-            case 3:
-                soma_binario()
+    case 1:
+        converter_binario()
+    case 2:
+        converter_decimal()
+ 
+    case 3:
+        soma_binario()
 
-            #case 4:
-            case 5:
-                return(menu)
-            
-            case _:
-                print('opção invalida')
+    case 4:
+        subtrair_binario
+    
+    case _:
+        print('opção invalida')
 
 main()
    
