@@ -30,7 +30,7 @@ def converter_binario():
 
 def converter_decimal(num_bin):
 
-    num_binario = (num_bin)
+    num_binario = int(num_bin)
 
     if '.' in num_binario:
         parte_inteira, parte_fracionaria = num_binario.split('.')
