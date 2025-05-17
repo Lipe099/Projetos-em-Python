@@ -14,10 +14,14 @@ match opcao:
     case 1:
         converter_binario()
     case 2:
-        converter_decimal()
+     
+
+     converter_decimal()
  
     case 3:
-        soma_binario()
+    
+
+     soma_binario()
 
     #case 4:
      

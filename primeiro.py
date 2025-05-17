@@ -28,9 +28,9 @@ def converter_binario():
        print(f" o numero binario do numero decimal{numero} é {binario}")
     
 
-def converter_decimal(num_bin):
+def converter_decimal():
 
-    num_binario = int(num_bin)
+    num_binario = (input("Digite um numero binario"))
 
     if '.' in num_binario:
         parte_inteira, parte_fracionaria = num_binario.split('.')
@@ -52,15 +52,10 @@ def converter_decimal(num_bin):
 
 def soma_binario():
 
- pri_binario = int(input("Digite o primeiro numero binario:") )  
- seg_binario = int(input("Digite o segundo numero binario:") )
+ pri_binario = input("Digite o primeiro numero binario:")  
+ seg_binario = input("Digite o segundo numero binario:") 
 
- pri_dec = converter_decimal(pri_binario)
- seg_dec = converter_decimal(seg_binario)
-
- res = pri_dec+ seg_dec
-
- res_bin = converter_binario(res)
+ res_bin = bin(int(pri_binario, 2) + int(seg_binario, 2))[2:]
 
  print(f"O resultado é {res_bin}")
 
