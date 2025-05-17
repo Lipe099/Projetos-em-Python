@@ -60,7 +60,7 @@ def soma_binario():
  print(f"O resultado é {res_bin}")
 
  
- def subtrair_binario():
+def subtrair_binario():
     pri_binario = input("Digite o primeiro numero binario:")  
     seg_binario = input("Digite o segundo numero binario:") 
 
