@@ -16,7 +16,7 @@ def converter_binario():
          fra_bin += str(bit)
          fra_num -= bit
         
-      res= int_bin + "." + fra_bin  
+      res = int_bin + "." + fra_bin  
 
         
 
@@ -49,3 +49,20 @@ def converter_decimal():
 
         print(f"o numero decimal do numero binario {num_binario} é {decimal}")
     return
+
+def soma_binario():
+
+ pri_binario = input("Digite o primeiro numero binario:")   
+ seg_binario = input("Digite o segundo numero binario:") 
+
+ pri_dec = converter_decimal(pri_binario)
+ seg_dec = converter_decimal(seg_binario)
+
+ res = pri_dec + seg_dec
+
+ res_bin = converter_binario(res)
+
+ print(f"O resultado é {res_bin}")
+
+ 
+ 
