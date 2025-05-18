@@ -55,7 +55,7 @@ def soma_binario(pri_binario,seg_binario):
 
  print(f"O resultado da soma é {res_bin}")
 
-def subtrair_binario(pri_binario,seg_binario):
+def subtrair_binario(pri_binario,seg_binario):#observação: realisar um filtro pra resultados negativos
  
  pri_dec = converter_decimal(pri_binario) 
  seg_dec = converter_decimal(seg_binario)
@@ -63,8 +63,7 @@ def subtrair_binario(pri_binario,seg_binario):
 
  res_bin = converter_binario(res)
   
-
- print(f"O resultado é {res_bin}")
+ print(f"O resultado da subtração é {res_bin}")
 
 def multiplicar_binario(pri_binario,seg_binario):
  
@@ -74,7 +73,7 @@ def multiplicar_binario(pri_binario,seg_binario):
 
  res_bin = converter_binario(res)
 
- print(f" O resultado em decimal é {res} e em binario é {res_bin} ")
+ print(f"O resultado da multipliacação é {res_bin} ")
 
 def dividir_binario(pri_binario,seg_binario):
   
@@ -84,7 +83,7 @@ def dividir_binario(pri_binario,seg_binario):
 
  res_bin = converter_binario(res)
 
- print(f" O resultado em decimal é {res} e em binario é {res_bin} ")
+ print(f"O resultado da divisão é {res_bin} ")
 
   
  

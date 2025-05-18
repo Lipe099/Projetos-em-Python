@@ -21,8 +21,7 @@ def main():
         print("")
         
         match opcao:
-
-
+            
             case 1:
                 num_dec = (input("Digite um numero decimal:"))
                 converter_binario(num_dec)
