@@ -16,6 +16,39 @@ def registrar_numero():
       except:
         print('Entrada inválida! Certifique-se de digitar um número.\n')
 
+def converter_binario(num):
+    numero = float(num)
+    int_num = int(numero)
+    fra_num = numero - int_num
+
+    if fra_num != 0:
+
+      int_bin = bin(int_num)[2:]
+      fra_bin = ""
+      print(f" {fra_num}")
+
+      
+      while fra_num and len(fra_bin) < 10:
+         fra_num *= 2
+         bit = int(fra_num)
+         fra_bin += str(bit)
+         fra_num -= bit
+
+      res = int_bin + "." + fra_bin  
+      num_bin = int_bin + "." + fra_bin  
+
+      print(f" o numero binario do decimal {numero} é {res} |")
+      print(f"O numero decimal {numero} fica {num_bin} em binario")
+
+    else: 
+       numero = int(numero)
+       res = bin(numero)[2:]
+       print(f" o numero binario do numero decimal{numero} é {res}")
+       num_bin = bin(numero)[2:]
+       print(f"O numero decimal {numero} fica {num_bin} em binario")
+
+    return res,num_bin
+   
 def converter_decimal(num):
 
     num_binario = num
