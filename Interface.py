@@ -80,17 +80,28 @@ def menu_binario_loop(): #LOOP DO MENU, ENQUANTO O NUMERO DE ENTRADA FOR DIFEREN
         match opcao:
 
 
+
             case 1:
                 num_dec = (input("Digite um numero decimal:"))
                 converter_binario(num_dec)
+                num_dec = (input("Digite um numero decimal:"))
+                converter_binario(num_dec)
             case 2:
+                num_bin = (input("Digite um numero binario:"))
+                converter_decimal(num_bin)
                 num_bin = (input("Digite um numero binario:"))
                 converter_decimal(num_bin)
             case 3:
                 num1_bin = (input("Digite o primeiro numero binario:"))
                 num2_bin = (input("Digite o segundo numero binario:"))
                 soma_binario(num1_bin, num2_bin)
+                num1_bin = (input("Digite o primeiro numero binario:"))
+                num2_bin = (input("Digite o segundo numero binario:"))
+                soma_binario(num1_bin, num2_bin)
             case 4:
+                num1_bin = (input("Digite o primeiro numero binario:"))
+                num2_bin = (input("Digite o segundo numero binario:"))
+                subtrair_binario(num1_bin, num2_bin)
                 num1_bin = (input("Digite o primeiro numero binario:"))
                 num2_bin = (input("Digite o segundo numero binario:"))
                 subtrair_binario(num1_bin, num2_bin)
