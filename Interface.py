@@ -29,7 +29,7 @@ def main():
                 soma_binario()
 
             case 4:
-                subtrair_binario
+                subtrair_binario()
             case 5:
                 print('encerrando o programa. Até logo')
                 break
