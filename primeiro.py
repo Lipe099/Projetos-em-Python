@@ -7,7 +7,6 @@ def converter_binario(num):
 
     if fra_num != 0:
       
-     
       int_bin = bin(int_num)[2:]
       fra_bin = ""
       print(f" {fra_num}")
@@ -20,18 +19,14 @@ def converter_binario(num):
         
       res = int_bin + "." + fra_bin  
 
-        
-
       print(f" o numero binario do decimal {numero} é {res} |")
 
-    
     else: 
        res = bin(int(numero))[2:]
        print(f" o numero binario do numero decimal{numero} é {res}")
 
     return res
     
-
 def converter_decimal(num):
 
     num_binario = num
@@ -46,7 +41,7 @@ def converter_decimal(num):
             if bit == '1':
                 decimal += 1/2**(i+1)
 
-        print(f"o numero decima do binario {num_binario} é {decimal} ")
+        print(f"o numero decimal do numero binario {num_binario} é {decimal} ")
 
     else:
 
@@ -57,15 +52,44 @@ def converter_decimal(num):
 
 def soma_binario(pri_binario,seg_binario):
 
+ pri_dec = converter_decimal(pri_binario) 
+ seg_dec = converter_decimal(seg_binario)
+ res = pri_dec + seg_dec 
 
- r = converter_decimal(pri_binario) 
- l = converter_decimal(seg_binario)
- k = r +l 
-
- res_bin = converter_binario(k)
-
+ res_bin = converter_binario(res)
 
  print(f"O resultado é {res_bin}")
 
+def subtrair_binario(pri_binario,seg_binario):
  
+ pri_dec = converter_decimal(pri_binario) 
+ seg_dec = converter_decimal(seg_binario)
+ res = pri_dec - seg_dec 
+
+ res_bin = converter_binario(res)
+  
+
+ print(f"O resultado é {res_bin}")
+
+def multiplicar_binario(pri_binario,seg_binario):
+ 
+ pri_dec = converter_decimal(pri_binario)
+ seg_dec = converter_decimal(seg_binario)
+ res = pri_dec * seg_dec
+
+ res_bin = converter_binario(res)
+
+ print(f" O resultado em decimal é {res} e em binario é {res_bin} ")
+
+def dividir_binario(pri_binario,seg_binario):
+  
+ pri_dec = converter_decimal(pri_binario)
+ seg_dec = converter_decimal(seg_binario)
+ res = pri_dec / seg_dec
+
+ res_bin = converter_binario(res)
+
+ print(f" O resultado em decimal é {res} e em binario é {res_bin} ")
+
+  
  
