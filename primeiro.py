@@ -9,30 +9,28 @@ def converter_binario(num):
       
       int_bin = bin(int_num)[2:]
       fra_bin = ""
-      print(f" {fra_num}")
-
+      
       while fra_num and len(fra_bin) < 10:
          fra_num *= 2
          bit = int(fra_num)
          fra_bin += str(bit)
          fra_num -= bit
         
-      res = int_bin + "." + fra_bin  
+      num_bin = int_bin + "." + fra_bin  
 
-      print(f" o numero binario do decimal {numero} é {res} |")
+      print(f"O numero decimal {numero} fica {num_bin} em binario")
 
     else: 
        numero = int(numero)
-       res = bin(numero)[2:]
-       print(f" o numero binario do numero decimal{numero} é {res}")
+       num_bin = bin(numero)[2:]
+       print(f"O numero decimal {numero} fica {num_bin} em binario")
 
-    return res
+    return num_bin
     
 def converter_decimal(num):
 
     num_binario = num
     
-
     if '.' in num_binario:
         parte_inteira, parte_fracionaria = num_binario.split('.')
 
@@ -41,13 +39,9 @@ def converter_decimal(num):
         for i,  bit in enumerate(parte_fracionaria):
             if bit == '1':
                 decimal += 1/2**(i+1)
-
-        print(f"o numero decimal do numero binario {num_binario} é {decimal} ")
-
+        print(f"O numero binario {num_binario} em decimal fica {decimal} ")
     else:
-
         decimal = int(num_binario, 2)
-
         print(f"o numero decimal do numero binario {num_binario} é {decimal}")
     return decimal
 
@@ -59,7 +53,7 @@ def soma_binario(pri_binario,seg_binario):
 
  res_bin = converter_binario(res)
 
- print(f"O resultado é {res_bin}")
+ print(f"O resultado da soma é {res_bin}")
 
 def subtrair_binario(pri_binario,seg_binario):
  
