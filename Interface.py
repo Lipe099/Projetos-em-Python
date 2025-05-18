@@ -1,4 +1,4 @@
-from primeiro import converter_binario, converter_decimal, soma_binario, subtrair_binario
+from primeiro import converter_binario, converter_decimal, soma_binario, subtrair_binario, multiplicar_binario,dividir_binario
 
 def menu():
     print("=" * 45)
@@ -6,9 +6,11 @@ def menu():
     print("=" * 45)
     print('converte um numero decimal para binario--- (1)')
     print('converte um numero binario para decimal--- (2)')
-    print('Realizar soma com numeros binarios     --- (3)')
+    print('Realizar soma com numeros binarios-------- (3)')
     print('Realizar subtração com numeros binarios--- (4)')
-    print("Sair                                   --- (5)")
+    print('Realizar multiplicação com numeros binarios(5)')
+    print('Realizar divisão com numeros binarios------(6)')
+    print("Sair-------------------------------------- (7)")
     print("="* 45)
 
 def main():
@@ -35,6 +37,18 @@ def main():
                 num1_bin = (input("Digite o primeiro numero binario:"))
                 num2_bin = (input("Digite o segundo numero binario:"))
                 subtrair_binario(num1_bin, num2_bin)
+            case 5:
+                num1_bin = (input("Digite o primeiro numero binario:"))
+                num2_bin = (input("Digite o segundo numero binario:"))
+                multiplicar_binario(num1_bin,num2_bin)
+            case 6:
+                num1_bin = (input("Digite o primeiro numero binario:"))
+                num2_bin = (input("Digite o segundo numero binario:"))
+                dividir_binario(num1_bin,num2_bin)
+            case 7:
+                print('encerrando o programa. Até logo')
+                break
+            
             case _:
                 print('opção invalida')
 

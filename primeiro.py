@@ -22,7 +22,8 @@ def converter_binario(num):
       print(f" o numero binario do decimal {numero} é {res} |")
 
     else: 
-       res = bin(int(numero))[2:]
+       numero = int(numero)
+       res = bin(numero)[2:]
        print(f" o numero binario do numero decimal{numero} é {res}")
 
     return res
