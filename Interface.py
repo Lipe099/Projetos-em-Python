@@ -33,7 +33,6 @@ def main():
             case 5:
                 print('encerrando o programa. Até logo')
                 break
-            
             case _:
                 print('opção invalida')
 

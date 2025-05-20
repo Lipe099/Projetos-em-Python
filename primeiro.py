@@ -2,7 +2,7 @@ def converter_binario():
     numero = (input("digite o numero decimal: "))
 
     if '.' in numero:
-      antes, depois = numero.split('.')
+      antes, depois = numero.split('.') # separa a parte do inteiro da decimal
       fra_num = float("0."+ depois)
       int_num = int(antes)
      
@@ -18,10 +18,7 @@ def converter_binario():
         
       res = int_bin + "." + fra_bin  
 
-        
-
-      print(f" o numero binario do decimal {numero} é {res} |")
-
+      print(f"O número binário do decimal {numero} é {res} |")
     
     else: 
        binario = bin(int(numero))[2:]
@@ -29,7 +26,6 @@ def converter_binario():
     
 
 def converter_decimal():
-
     num_binario = (input("Digite um numero binario"))
 
     if '.' in num_binario:
@@ -44,21 +40,18 @@ def converter_decimal():
         print(f"o numero decima do binario {num_binario} é {decimal} ")
 
     else:
-
         decimal = int(num_binario, 2)
 
         print(f"o numero decimal do numero binario {num_binario} é {decimal}")
     return
 
 def soma_binario():
+    pri_binario = input("Digite o primeiro numero binario:")  
+    seg_binario = input("Digite o segundo numero binario:") 
 
- pri_binario = input("Digite o primeiro numero binario:")  
- seg_binario = input("Digite o segundo numero binario:") 
+    res_bin = bin(int(pri_binario, 2) + int(seg_binario, 2))[2:]
 
- res_bin = bin(int(pri_binario, 2) + int(seg_binario, 2))[2:]
-
- print(f"O resultado é {res_bin}")
-
+    print(f"O resultado é {res_bin}")
  
 def subtrair_binario():
     pri_binario = input("Digite o primeiro numero binario:")  
