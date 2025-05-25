@@ -1,4 +1,4 @@
-from primeiro import registrar_numero, converter_binario, converter_decimal, soma_binario, subtrair_binario, multiplicar_binario, dividir_binario
+from primeiro import  converter_binario, converter_decimal, soma_binario, subtrair_binario, multiplicar_binario, dividir_binario
 from matriz import criar_matriz, operar_matrizes  # Importa as funções necessárias
 
 
@@ -21,7 +21,7 @@ def menu_MATRIZ():
     print(f"{'3':<10}{'Subtrair matrizes':<30}====|")
     print(f"{'4':<10}{'Multiplicar matrizes':<30}====|")
     print(f"{'5':<10}{'Determinante da matriz':<30}====|")
-    print(f"ww{'6':<10}{'Inversa da matriz':<30}====|")
+    print(f"{'6':<10}{'Inversa da matriz':<30}====|")
     print(f"{'7':<10}{'Matriz transposta':<30}====|")
     print(f"{'8':<10}{'Voltar ao menu principal':<30}====|")
     print("=" * 45)
@@ -37,8 +37,7 @@ def menu_BINARIO():
     print('4 - Subtração de números binários')
     print('5 - Realizar multiplicação com numeros binarios')
     print('6 - Realizar divisão com numeros binarios')
-    print('7 - Registrar números decimais')
-    print('8 - Voltar ao menu principal')
+    print('7 - Voltar ao menu principal')
     print("=" * 45)
 
 
@@ -83,28 +82,25 @@ def menu_binario_loop(): #LOOP DO MENU, ENQUANTO O NUMERO DE ENTRADA FOR DIFEREN
 
             case 1:
                 num_dec = (input("Digite um numero decimal:"))
-                converter_binario(num_dec)
-                num_dec = (input("Digite um numero decimal:"))
-                converter_binario(num_dec)
+                bin = converter_binario(num_dec)
+                print(f"O numero binario de {num_dec} é {bin}")
+                
             case 2:
                 num_bin = (input("Digite um numero binario:"))
-                converter_decimal(num_bin)
-                num_bin = (input("Digite um numero binario:"))
-                converter_decimal(num_bin)
+                dec = converter_decimal(num_bin)
+                print(f"O numero decimal de {num_bin} é {dec}")
+
             case 3:
                 num1_bin = (input("Digite o primeiro numero binario:"))
                 num2_bin = (input("Digite o segundo numero binario:"))
                 soma_binario(num1_bin, num2_bin)
-                num1_bin = (input("Digite o primeiro numero binario:"))
-                num2_bin = (input("Digite o segundo numero binario:"))
-                soma_binario(num1_bin, num2_bin)
+                
+
             case 4:
                 num1_bin = (input("Digite o primeiro numero binario:"))
                 num2_bin = (input("Digite o segundo numero binario:"))
                 subtrair_binario(num1_bin, num2_bin)
-                num1_bin = (input("Digite o primeiro numero binario:"))
-                num2_bin = (input("Digite o segundo numero binario:"))
-                subtrair_binario(num1_bin, num2_bin)
+
             case 5:
                 num1_bin = (input("Digite o primeiro numero binario:"))
                 num2_bin = (input("Digite o segundo numero binario:"))
@@ -114,8 +110,6 @@ def menu_binario_loop(): #LOOP DO MENU, ENQUANTO O NUMERO DE ENTRADA FOR DIFEREN
                 num2_bin = (input("Digite o segundo numero binario:"))
                 dividir_binario(num1_bin,num2_bin)
             case 7:
-                registrar_numero()
-            case 8:
                 print("Encerrando o programa. Até logo!")
                 break
             case _:
