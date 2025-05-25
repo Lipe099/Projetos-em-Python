@@ -16,6 +16,8 @@ def registrar_numero():
       except:
         print('Entrada inválida! Certifique-se de digitar um número.\n')
 
+
+
 def converter_binario(num):
     numero = float(num)
     int_num = int(numero)

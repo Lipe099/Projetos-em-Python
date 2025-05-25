@@ -21,7 +21,7 @@ def menu_MATRIZ():
     print(f"{'3':<10}{'Subtrair matrizes':<30}====|")
     print(f"{'4':<10}{'Multiplicar matrizes':<30}====|")
     print(f"{'5':<10}{'Determinante da matriz':<30}====|")
-    print(f"{'6':<10}{'Inversa da matriz':<30}====|")
+    print(f"ww{'6':<10}{'Inversa da matriz':<30}====|")
     print(f"{'7':<10}{'Matriz transposta':<30}====|")
     print(f"{'8':<10}{'Voltar ao menu principal':<30}====|")
     print("=" * 45)
