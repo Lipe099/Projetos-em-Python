@@ -60,7 +60,7 @@ def operar_matrizes(matrizes, op):
                 print("Erro: Para a multiplicação matricial, o número de colunas da primeira matriz deve ser igual ao número de linhas da segunda matriz.")
                 return
             resultado = matrizA @ matrizB  # Multiplicação matricial
-    elif op == 5:
+    elif op == 5:# Cálculo da determinante da matriz
             matrizA_nome = input(
                 "Digite o nome da matriz para a operação:")
 
@@ -70,7 +70,7 @@ def operar_matrizes(matrizes, op):
                 print(" matriz não exite!! ")
                 return
 
-            det_matrizA = np.linalg.det(matrizA)
+            det_matrizA = np.linalg.det(matrizA) #determinante da matriz
             
             if 0 < det_matrizA < 2:
                 det_matrizA = 1
@@ -80,7 +80,7 @@ def operar_matrizes(matrizes, op):
 
             print('ola estou em desnvolvimento')
             return
-    elif op == 6:
+    elif op == 6:# Cálculo da matriz inversa
             matrizA_nome = input(
                 "Digite o nome da matriz para a operação:")
 
@@ -90,11 +90,11 @@ def operar_matrizes(matrizes, op):
                  print(" matriz não exite!! ")
                  return
 
-            inv_matrizA = np.linalg.inv(matrizA)
+            inv_matrizA = np.linalg.inv(matrizA) #matriz inversa
             
             print(inv_matrizA)
 
-            print('ola estou em desenvolvimento')
+            
             return
 
     elif op == 7:  # Cálculo da transposta
@@ -108,6 +108,45 @@ def operar_matrizes(matrizes, op):
             return
 
         resultado = matrizA.T  # Transposta da matriz
+    elif op == 8:  
+        matrizA_nome = input("Digite o nome da Matriz: ")
+
+        matrizA = matrizes.get(matrizA_nome) 
+
+        maior = menor = matrizA[1][0]
+
+        for linha in matrizA:
+          for valor in linha:
+            if valor > maior:
+               maior = valor
+            if valor < menor:
+               menor = valor
+
+        print(f"{maior} é o maior numero da matriz, {menor} é o menor numero da matriz")
+        return
+    
+    elif op == 9:
+        matrizA_nome = input("Digite o nome da primeira matriz:")
+        matrizB_nome = input("Digite o nome da segunda matriz:")
+        matrizC_nome = input("Digite o nome da terceira matriz:")
+
+        matrizA = matrizes.get(matrizA_nome)
+        matrizB = matrizes.get(matrizB_nome)
+        matrizC = matrizes.get(matrizC_nome)
+
+        opção = input("Qual sera a operação?:")
+
+        if opção == 'a' or 'A':
+           resposta = matrizA.T - 2*matrizB + matrizC^-1
+        elif opção == 'b' or 'B':
+           resposta = matrizB.T - matrizA*matrizC
+        else:
+            print("opção invalida")
+        
+        print(f" o resultado é {resposta}")
+
+        return
+
     else:
         print("Operação inválida.")
         return

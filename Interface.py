@@ -23,7 +23,9 @@ def menu_MATRIZ():
     print(f"{'5':<10}{'Determinante da matriz':<30}====|")
     print(f"{'6':<10}{'Inversa da matriz':<30}====|")
     print(f"{'7':<10}{'Matriz transposta':<30}====|")
-    print(f"{'8':<10}{'Voltar ao menu principal':<30}====|")
+    print(f"{'8':<10}{'Maior e menor numero da matriz':<30}====|")
+    print(f"{'9':<10}{'Operação da Questão 8':<30}====|")
+    print(f"{'10':<10}{'Voltar ao menu principal':<30}====|")
     print("=" * 45)
 
 
@@ -53,12 +55,12 @@ def menu_matriz_loop():
 
         if opcao == 1:
             matrizes = criar_matriz()
-        elif opcao in [2, 3, 4, 5, 6, 7]:
+        elif opcao in [2, 3, 4, 5, 6, 7, 8, 9 ]:
             if not matrizes:
                 print("Erro: Nenhuma matriz foi criada ainda.\n")
                 continue
             operar_matrizes(matrizes, op=opcao)
-        elif opcao == 8:
+        elif opcao == 10:
             print("Voltando ao menu principal...\n")
             break
         else:
