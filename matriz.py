@@ -2,25 +2,20 @@ import numpy as np
 
 
 def criar_matriz():  # permite o usuário criar matrizes
-
     matrizes = {}  # Dicionário para armazenar as matrizes com nomes
     # usuario informa o numero de matrizes que ele deseja criar
     quantidade = int(input("quantas matrizes você deseja criar:"))
 
     for i in range(quantidade):
-        nome = input(f"Digite o nome da matriz {i+1}:")
-        # O usuário informa o nome da matriz.
-        linhas = int(input(f"Digite o número de linhas da {nome}: "))
-        # O usuário informa a ordem da matriz.
-        colunas = int(input(f"Digite o número de colunas da {nome}: "))# O usuário informa a ordem da matriz.
+        nome = input(f"Digite o nome da matriz {i+1}:") # O usuário informa o nome da matriz.
+        linhas = int(input(f"Digite o número de linhas da {nome}: ")) # O usuário informa a ordem da matriz.
+        colunas = int(input(f"Digite o número de colunas da {nome}: ")) # O usuário informa a ordem da matriz.
 
         # O usuário passa os valores da matriz da ordem especificada por ele.
         print(f"Digite os valores da matriz {nome} ({linhas}x{colunas}):")
-        # cria uma matriz vazia. OBS:dtype define os tipos de dados(inteiros)
-        matriz = np.empty((linhas, colunas), dtype=int)
+        matriz = np.empty((linhas, colunas), dtype=int) # cria uma matriz vazia. OBS:dtype define os tipos de dados(inteiros)
 
         for l in range(linhas):  # usamos range para gerar um intervalo, mas estamos usando (linhas) para informar a quantidade da sequencia
-
             for c in range(colunas):  # mesma coisa, soq para coluna.
                 # O codigo pede o valor, informando a posição correspondente. ex matriz 2x2: (0.0),(0.1),(1.0),(1.1)
                 valor = int(input(f"Valor para a posição [{l}][{c}]: "))
@@ -108,6 +103,7 @@ def operar_matrizes(matrizes, op):
             return
 
         resultado = matrizA.T  # Transposta da matriz
+        
     elif op == 8:  
         matrizA_nome = input("Digite o nome da Matriz: ")
 
@@ -137,7 +133,7 @@ def operar_matrizes(matrizes, op):
         opção = input("Qual sera a operação?:")
 
         if opção == 'a' or 'A':
-           resposta = matrizA.T - 2*matrizB + matrizC^-1
+           resposta = matrizA.T - 2*matrizB + np.linalg.inv(matrizC)
         elif opção == 'b' or 'B':
            resposta = matrizB.T - matrizA*matrizC
         else:

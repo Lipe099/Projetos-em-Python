@@ -65,9 +65,6 @@ def menu_matriz_loop():
             break
         else:
             print("Opção inválida. Tente novamente.\n")
-        
-        
-
 
 def menu_binario_loop(): #LOOP DO MENU, ENQUANTO O NUMERO DE ENTRADA FOR DIFERENTES DE 5, O LOOP CONTINUA
     while True:
@@ -79,8 +76,6 @@ def menu_binario_loop(): #LOOP DO MENU, ENQUANTO O NUMERO DE ENTRADA FOR DIFEREN
             continue
     
         match opcao:
-
-
 
             case 1:
                 num_dec = (input("Digite um numero decimal:"))

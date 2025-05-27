@@ -6,18 +6,16 @@ def converter_binario(num):
     fra_num = numero - int_num
 
     if fra_num != 0:
+        int_bin = bin(int_num)[2:]
+        fra_bin = ""
+        print(f" {fra_num}")
 
-      int_bin = bin(int_num)[2:]
-      fra_bin = ""
-      print(f" {fra_num}")
-
-      while fra_num and len(fra_bin) < 10:
-         fra_num *= 2
-         bit = int(fra_num)
-         fra_bin += str(bit)
-         fra_num -= bit
-
-      num_bin = int_bin + "." + fra_bin  
+        while fra_num and len(fra_bin) < 10:
+            fra_num *= 2
+            bit = int(fra_num)
+            fra_bin += str(bit)
+            fra_num -= bit
+        num_bin = int_bin + "." + fra_bin  
 
     else: 
        numero = int(numero)
@@ -26,7 +24,6 @@ def converter_binario(num):
     return num_bin
    
 def converter_decimal(num):
-
     num_binario = num
 
     if '.' in num_binario:
@@ -44,44 +41,40 @@ def converter_decimal(num):
     return decimal
  
 def soma_binario(pri_binario,seg_binario):
+    pri_dec = converter_decimal(pri_binario) 
+    seg_dec = converter_decimal(seg_binario)
+    res = pri_dec + seg_dec 
 
- pri_dec = converter_decimal(pri_binario) 
- seg_dec = converter_decimal(seg_binario)
- res = pri_dec + seg_dec 
+    res_bin = converter_binario(res)
 
- res_bin = converter_binario(res)
-
- print(f"O resultado da soma é {res_bin} seu valor em base(10) é {res}")
+    print(f"O resultado da soma é {res_bin} seu valor em base(10) é {res}")
 
 def subtrair_binario(pri_binario,seg_binario):
- 
- pri_dec = converter_decimal(pri_binario) 
- seg_dec = converter_decimal(seg_binario)
- res = pri_dec - seg_dec 
+    pri_dec = converter_decimal(pri_binario) 
+    seg_dec = converter_decimal(seg_binario)
+    res = pri_dec - seg_dec 
 
- res_bin = converter_binario(res)
-  
- print(f"O resultado da subtração é {res_bin} seu valor em base(10) é {res}")
+    res_bin = converter_binario(res)
+    
+    print(f"O resultado da subtração é {res_bin} seu valor em base(10) é {res}")
 
 def multiplicar_binario(pri_binario,seg_binario):
- 
- pri_dec = converter_decimal(pri_binario)
- seg_dec = converter_decimal(seg_binario)
- res = pri_dec * seg_dec
+    pri_dec = converter_decimal(pri_binario)
+    seg_dec = converter_decimal(seg_binario)
+    res = pri_dec * seg_dec
 
- res_bin = converter_binario(res)
+    res_bin = converter_binario(res)
 
- print(f"O resultado é {res_bin} seu valor em base(10) é {res}")
+    print(f"O resultado é {res_bin} seu valor em base(10) é {res}")
 
 def dividir_binario(pri_binario,seg_binario):
-  
- pri_dec = converter_decimal(pri_binario)
- seg_dec = converter_decimal(seg_binario)
- res = pri_dec / seg_dec
+    pri_dec = converter_decimal(pri_binario)
+    seg_dec = converter_decimal(seg_binario)
+    res = pri_dec / seg_dec
 
- res_bin = converter_binario(res)
+    res_bin = converter_binario(res)
 
- print(f"O resultado é {res_bin} seu valor em base(10) é {res} ")
+    print(f"O resultado é {res_bin} seu valor em base(10) é {res} ")
 
   
  
