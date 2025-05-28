@@ -93,15 +93,12 @@ def menu_binario_loop(): #LOOP DO MENU, ENQUANTO O NUMERO DE ENTRADA FOR DIFEREN
                 print(f"O numero decimal de {num_bin} é {dec}")
 
             case 3:
-                num1_bin = (input("Digite o primeiro numero binario:"))
-                num2_bin = (input("Digite o segundo numero binario:"))
-                soma_binario(num1_bin, num2_bin)
+                soma_binario()
                 
 
             case 4:
-                num1_bin = (input("Digite o primeiro numero binario:"))
-                num2_bin = (input("Digite o segundo numero binario:"))
-                subtrair_binario(num1_bin, num2_bin)
+                
+                subtrair_binario()
 
             case 5:
                 num1_bin = (input("Digite o primeiro numero binario:"))
