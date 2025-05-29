@@ -1,6 +1,5 @@
 import numpy as np
 
-
 def criar_matriz():  # permite o usuário criar matrizes
     matrizes = {}  # Dicionário para armazenar as matrizes com nomes
     # usuario informa o numero de matrizes que ele deseja criar
